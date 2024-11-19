@@ -93,10 +93,14 @@ nav ul li a:hover {
     cursor: pointer;
     text-transform: uppercase;
     margin-top: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .hero-content .learn-more:hover {
     background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Footer */
@@ -122,12 +126,14 @@ footer .request-quote {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 footer .request-quote:hover {
     background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Contact Page */
@@ -147,15 +153,15 @@ footer .request-quote:hover {
     color: #ccc;
 }
 
-/* Modern Form Styles */
+/* 3D Modern Form Styles */
 #contact-form-container {
     margin: 0 auto;
     padding: 2rem;
-    background-color: #222;
-    border-radius: 8px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: left;
+    background: linear-gradient(145deg, #1e1e1e, #252525);
+    border-radius: 10px;
+    max-width: 750px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5), -8px -8px 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 
 #contact-form-container h2 {
@@ -167,21 +173,28 @@ footer .request-quote:hover {
 #contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    align-items: center; /* Center the form fields */
 }
 
 #contact-form label {
     font-weight: bold;
     color: #ddd;
+    width: 100%;
+    max-width: 500px; /* Matches the input field width */
+    text-align: left;
 }
 
 #contact-form input,
-#contact-form textarea {
+#contact-form textarea,
+#contact-form select {
     width: 100%;
+    max-width: 500px; /* Reduce input field width */
     padding: 1rem;
-    border: 1px solid #555;
+    border: none;
     border-radius: 6px;
-    background-color: #333;
+    background: linear-gradient(145deg, #333, #3b3b3b);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5), inset -4px -4px 8px rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 1rem;
 }
@@ -191,9 +204,13 @@ footer .request-quote:hover {
     color: #aaa;
 }
 
+#contact-form select {
+    cursor: pointer;
+}
+
 #contact-form textarea {
     resize: none;
-    height: 150px;
+    height: 100px;
 }
 
 #contact-form button {
@@ -206,11 +223,14 @@ footer .request-quote:hover {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), -4px -4px 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #contact-form button:hover {
     background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.6), -6px -6px 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive Design */
@@ -233,7 +253,8 @@ footer .request-quote:hover {
     }
 
     #contact-form input,
-    #contact-form textarea {
+    #contact-form textarea,
+    #contact-form select {
         font-size: 0.9rem;
     }
 
